@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFMonitor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">PFMonitor</div>
+        <div class="social-buttons">
+            <button class="help-btn" id="showTutorial">
+                <i class="fas fa-question-circle"></i>
+                Guide
+            </button>
+            <a href="#" class="social-btn twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-btn telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="monitor-container">
+            <div class="toggles-section">
+                <h2>Filters</h2>
+                <div class="toggle-group">
+                    <label class="toggle">
+                        <input type="checkbox" id="firstCreator">
+                        <span class="slider"></span>
+                        <span class="label">First Creator Coin</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="devOut">
+                        <span class="slider"></span>
+                        <span class="label">Dev Is Out</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="fundedCex">
+                        <span class="slider"></span>
+                        <span class="label">Funded via CEX</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="uniqueSocials">
+                        <span class="slider"></span>
+                        <span class="label">Unique Socials</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="oneSocial">
+                        <span class="slider"></span>
+                        <span class="label">At Least One Social</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="websiteWorking">
+                        <span class="slider"></span>
+                        <span class="label">Website Is Working</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="uniqueImage">
+                        <span class="slider"></span>
+                        <span class="label">Unique Image</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="uniqueName">
+                        <span class="slider"></span>
+                        <span class="label">Unique Name</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="inputs-section">
+                <h2>Parameters</h2>
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="marketCap">Market Cap (USD)</label>
+                        <input type="number" id="marketCap" placeholder="Min market cap">
+                    </div>
+                    <div class="input-field">
+                        <label for="minHolders">Minimum Holders</label>
+                        <input type="number" id="minHolders" placeholder="Min holders">
+                    </div>
+                    <div class="input-field">
+                        <label for="maxDevBuy">Max Dev Buy</label>
+                        <input type="number" id="maxDevBuy" placeholder="Max dev buy">
+                    </div>
+                    <div class="input-field">
+                        <label for="minDevBuy">Min Dev Buy</label>
+                        <input type="number" id="minDevBuy" placeholder="Min dev buy">
+                    </div>
+                    <div class="input-field">
+                        <label for="maxCoinAge">Max Coin Age (seconds)</label>
+                        <input type="number" id="maxCoinAge" placeholder="Max coin age">
+                    </div>
+                </div>
+            </div>
+
+            <div class="webhook-section">
+                <h2>Discord Webhook</h2>
+                <input type="text" id="webhookUrl" placeholder="Enter Discord webhook URL">
+                <button id="startButton" class="start-btn">Start Monitor</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="overlay" id="tutorialOverlay">
+        <div class="tutorial-popup">
+            <div class="step-container">
+                <div class="step" data-step="1">
+                    <h3>Step 1: Configure Filters</h3>
+                    <p>Toggle the switches to set your desired pump.fun coin criteria.</p>
+                </div>
+                <div class="step" data-step="2">
+                    <h3>Step 2: Set Parameters</h3>
+                    <p>Enter your preferred values for market cap, holders, and other numerical criteria.</p>
+                </div>
+                <div class="step" data-step="3">
+                    <h3>Step 3: Add Webhook</h3>
+                    <p>Enter your Discord webhook URL to receive notifications.</p>
+                </div>
+                <div class="step" data-step="4">
+                    <h3>Step 4: Start Monitoring</h3>
+                    <p>Click the green Start Monitor button to begin tracking coins.</p>
+                </div>
+            </div>
+            <div class="tutorial-controls">
+                <button class="tutorial-btn" id="prevStep" disabled>Previous</button>
+                <div class="step-dots"></div>
+                <button class="tutorial-btn" id="nextStep">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
